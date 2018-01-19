@@ -1,0 +1,94 @@
+/* CSS Document */
+*,::before,::after{ margin:0; padding:0; box-sizing:border-box;}
+
+a, article, aside, audio, b, blockquote, body, canvas, caption, dd,  details,div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, label, legend, li, menu, nav, object, ol, output, p,s, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video
+ { margin: 0; padding: 0;  -webkit-touch-callout: none;/*当你触摸并按住触摸目标时候，禁止或显示系统默认菜单 */-webkit-tap-highlight-color: rgba(0,0,0,0); }
+ 
+ol, ul,li{ list-style: none;}
+
+table { border-collapse: collapse;/*表格的边线重叠*/ border-spacing: 0; }
+input,textarea{resize:none;/*调整尺寸*/ -webkit-user-select: auto !important;} 
+
+:focus{outline:none;}
+
+input[type="submit"], input[type="reset"], input[type="button"], input[type="password"], input[type="text"], input[type="search"], input[type="number"], button {
+	-webkit-appearance: none;/* 针对表单的默认的样式进行清除  比如立体效果*/
+	outline: none;
+}
+
+img{ display:block;vertical-align: middle;border: 0 none;}
+
+a,a:link,a:visited{ text-decoration:none; color:#343434; }
+a:hover{ color:#ff6699;
+	}
+.clearfix:after{content:""; display:block; height:0; clear:both; visibility:hidden;}
+
+.fl{float:left;}
+.fr{float:right;}
+ 
+html{font-size:100px;/*表示100px=1rem;       625%    62.5%*/}
+
+body{font-family: "microsoft yahei", "\534E\6587\7EC6\9ED1", Verdana, Arial, Helvetica, sans-serif; 
+font-size:24px; background:rgba(204,204,204,0.4); -webkit-user-select:none; /*禁止选中内容*/-webkit-text-size-adjust: none;/*不调整（拉伸）字大小*/}  
+
+                 /*微软雅黑      华文细黑                                         最后一个字体：ios系统默认 */
+.m_layout{ width:100%; /*height:1800px;*//*后续再去掉*/ background:rgba(255,255,255,1); max-width:7.5rem; min-width:3.2rem; margin:0 auto;-webkit-overflow-scrolling:touch; position:relative; z-index:100;padding-bottom:1rem;/*注意的地方*/ }
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/iconfont.woff') format('woff'),
+  url('../fonts/iconfont.ttf') format('truetype'),
+  url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*header*/
+header{ width:100%; height:0.88rem; background: rgba(255,81,136,0.85); position:fixed;/*固定定位*/ z-index:1000;}
+header .header_left{ width:0.44rem; height:0.44rem; display:block;  font-size:0.44rem; color:#fff; position:absolute; top:0.2rem; left:0.24rem; z-index:10;}
+header .search_box{ width:100%; height:0.68rem; position:absolute; top:0.1rem; left:0; padding:0 0.88rem; z-index:9;}
+header .search_box form{ width:100%; height:0.68rem; position:relative;/*参照物*/}
+header .search_box form input[type="search"]{ width:100%; height:100%; border-radius:0.1rem; border:0 none;background:rgba(255,255,255,0.6); box-shadow:0 0.04rem 0.1rem  rgba(102,102,102,0.2) inset; font-size:0.3rem; padding-left:0.1rem; color:#fff;}
+header .search_box form input[type="search"]::-webkit-input-placeholder {
+	color: #fff;
+}
+header .search_box form input[type="submit"]{width:0.44rem; height:0.44rem; background:transparent;/*透明的背景*/ font-size:0.44rem; color:#fff; border:0 none; position:absolute; right:0.1rem; top:0.14rem;}
+header .header_right{ width:0.44rem; height:0.44rem; display:block; font-size:0.44rem; color:#fff; position:absolute; top:0.2rem; right:0.24rem; z-index:10;}
+
+
+
+/*m_header*/
+.m_sub_header{ width:100%; height:0.88rem; background:rgba(254,58,104,0.8); position:fixed;/*参照物6-13新修*/ z-index:20; top:0; z-index:1000;}
+.m_sub_header .m_header_l{ width:1.14rem; height:0.54rem; position:absolute; top:0.2rem; left:0.2rem; }
+.m_sub_header .m_header_l a{ display:block; width:100%; height:100%; font-size:0.38rem; color:#fff;}
+.m_sub_header .m_header_l a img{ width:1.14rem; height:auto;}
+.m_sub_header .search_box{ width:100%; height:0.68rem;  position:absolute; top:0.1rem; padding:0 1rem 0 1.36rem;}
+.m_sub_header .search_box form{ position:static;/**/}
+.m_sub_header .search_box input[type=search]{ width:100%; height:0.68rem; background:rgba(255,255,255,0.5); font-size:0.30rem; padding-left:0.1rem; border-radius:0.1rem; position:relative; border:1px solid rgba(255,255,255,0.5);}
+.m_sub_header .search_box input[type=search]::-webkit-input-placeholder { color:#fff;}
+.m_sub_header .search_box input[type=submit]{ width:0.44rem; height:0.44rem; background:transparent; position:absolute; right:0.3rem; top:0.12rem;  font-size:0.44rem; color:#fff; border:0 none;}
+
+
+/*footer*/
+footer{ width:100%; height:1rem; background:rgba(255,255,255,1); position:fixed; bottom:0; z-index:1000;}
+footer ul{ width:100%; height:100%; display:flex;}
+footer ul li{flex:1; padding:0.1rem;}
+footer ul li a{ width:100%; height:100%; display:block;}
+footer ul li:nth-child(1) a{ background:url(../images/home.jpg) no-repeat center center; background-size: contain;}
+footer ul li:nth-child(2) a{ background:url(../images/cat.jpg) no-repeat center center; background-size: contain;}
+footer ul li:nth-child(3) a{ background:url(../images/find.jpg) no-repeat center center; background-size: contain;}
+footer ul li:nth-child(4) a{ background:url(../images/cart.jpg) no-repeat center center; background-size: contain;}
+footer ul li:nth-child(5) a{ background:url(../images/my.jpg) no-repeat center center; background-size: contain;}
+
+footer ul li:nth-child(1).active a{ background:url(../images/H_home.jpg) no-repeat center center; background-size: contain;}
+footer ul li:nth-child(2).active a{ background:url(../images/H_cat.jpg) no-repeat center center; background-size: contain;}
+footer ul li:nth-child(3).active a{ background:url(../images/H_cart.jpg) no-repeat center center; background-size: contain;}
+footer ul li:nth-child(4).active a{ background:url(../images/H_find.jpg) no-repeat center center; background-size: contain;}
+footer ul li:nth-child(5).active a{ background:url(../images/H_my.jpg) no-repeat center center; background-size: contain;}
